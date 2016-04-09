@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Fashion box</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="select2/css/select2.min.css">
+	<link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<!-- <link rel="stylesheet" href="dist/jquery.flipster.min.css"> -->
+	<!-- <link rel="stylesheet" href="css/font.css"> -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script type="text/javascript" src='js/jquery-1.9.1.min.js'></script>
+	<script type="text/javascript" src="3dcarousel/js/Carousel.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src='select2/js/select2.min.js'></script>
+	<script type="text/javascript" src='js/jquery.mCustomScrollbar.concat.min.js'></script>
+	<script type="text/javascript" src='js/sliderWithScroll.js'></script>
+	<script type="text/javascript" src='js/main.js'></script>
+
+	
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+
+</head>
+<body>
+	<header>
+		<div class="wrap_top_line_header wrap_block_with_border_dashed">
+			<div class="top_line_header border_dashed clearfix">
+				<div class="menu_small">
+					<div class="line_menu_small"></div>
+					<div class="line_menu_small"></div>
+				</div>
+				<nav>
+					<ul class="clearfix">
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">доставка и оплата</a></li>
+						<li><a href="#">контакты</a></li>
+						<li><a href="#">доска обьявлений</a></li>
+					</ul>
+				</nav>
+				<a href="#" rel="login_form" class="enter_enter_login show_popup"><i class="fa fa-lock orange"></i>войти в личный кабинет</a>
+				<div class="wrap_block_center">
+					<div class="wrap_select block_center">
+						<div class="wrap_border">
+							<div class="line_top_border"></div>
+							<div class="line_left_border"></div>
+							<div class="line_right_border"></div>
+							<div class="line_bottom_border"></div>
+						</div>
+						<i class="fa fa-search orange"></i>
+						<select class="js-select">
+							<option value="">по всем категориям</option>
+							<option value="1">категориям1</option>
+							<option value="2">категориям2</option>
+							<option value="6">категориям3</option>
+							<option value="3">категориям4</option>
+							<option value="4">категориям5</option>
+							<option value="5">категориям6</option>
+							<option value="7">категориям7</option>
+							<option value="8">категориям8</option>
+							<option value="9">категориям9</option>
+							<option value="10">категориям10</option>
+							
+						</select>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_info clearfix">
+			<a href="#" class="logo pull_left"><img src="image/logo.png" class="responsive_img" alt="Fashion box"></a>
+			<div class="call_date pull_left">
+				<div class="title"><i class="fa fa-mobile"></i> Позвоните нам</div>
+				<p>тел.:  (0482)  34-11-08<br>
+				тел.:  (0482)  34-99-28</p>
+				<a href="#" rel="call_back" class="show_popup">
+					<span class="brd_dashed_bottom">Обратный звонок</span> 
+					<i class="fa fa-phone orange"></i>
+				</a>
+			</div>
+			<a href="#" class="added_product cart_header pull_right"><i class="fa fa-cart-arrow-down"></i><span class="amount">67</span><br>
+				<span class="brd_dashed_bottom">корзина</span>
+			</a>
+			<a href="#" class="added_product compare_header pull_right"><i class="fa fa-balance-scale"></i><span class="amount">5</span><br>
+				<span class="brd_dashed_bottom">сравнение</span>
+			</a>
+			<div class="wrap_block_center">
+				<div class="sort_product block_center">
+					<form name="form_sort" action="#" method="post">
+					 	<div class="wrap_radio_buttons">
+					 		<div class="wrap_radio">
+						 		<input name="sort_price" type="radio" checked id="all_product">
+								<label for="all_product"> Все цены</label>
+					 		</div>
+					 		<div class="wrap_radio">
+					 			<input name="sort_price" type="radio" id="wholesale_product">
+								<label for="wholesale_product"> опт</label>
+					 		</div>
+					 		<div class="wrap_radio">
+					 			<input name="sort_price" type="radio" id="retail_product">
+								<label for="retail_product"> розница</label>
+					 		</div>
+						</div>
+						<div class="wrap_checkbox">
+							<input name="China" type="checkbox" checked id="China">
+							<label for="China"><i class="fa fa-check-square-o check"></i><i class="fa fa-square-o no_check"></i>Kитай</label>
+						</div>
+						<div class="wrap_checkbox">
+							<input name="Turkey" type="checkbox" checked id="Turkey">
+							<label for="Turkey"><i class="fa fa-check-square-o check"></i><i class="fa fa-square-o no_check"></i>Tурция</label>
+						</div>
+						<div class="wrap_checkbox">
+							<input name="Europe" type="checkbox" checked id="Europe">
+							<label for="Europe"><i class="fa fa-check-square-o check"></i><i class="fa fa-square-o no_check"></i>Европа</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper_carousel3d">
+			<div class="wrap_block_with_border_dashed top">
+				<div class="border_dashed"></div>
+			</div>
+			
+			<div id="carousel3d_header">
+			  <ul>
+			    <li>
+			    	<img src="image/slider_img.png"/>	
+			    	<div class="title_img wrap_block_with_border_dashed">
+			    		<div class="border_dashed clearfix">
+				    		<a href="#" class="btn big center_text btn_with_line pull_right"><span>Купить</span></a>
+				    		<div class="name_img">нитка ekospun</div>
+			    		</div>
+			    	</div>
+			    </li>
+			    <li>
+			    	<img src="image/slid_img1_fix.png" />	
+			    	<div class="title_img wrap_block_with_border_dashed">
+			    		<div class="border_dashed clearfix">
+				    		<a href="#" class="btn big center_text btn_with_line pull_right"><span>Купить</span></a>
+				    		<div class="name_img">нитка ekospun</div>
+			    		</div>
+			    	</div>
+			    </li>
+			    <li>
+			    	<img src="image/slider_img.png" />	
+			    	<div class="title_img wrap_block_with_border_dashed">
+			    		<div class="border_dashed clearfix">
+				    		<a href="#" class="btn big center_text btn_with_line pull_right"><span>Купить</span></a>
+				    		<div class="name_img">нитка ekospun</div>
+			    		</div>
+			    	</div>
+			    </li>
+			    <li>
+			    	<img src="image/slid_img1_fix.png"/>	
+			    	<div class="title_img wrap_block_with_border_dashed">
+			    		<div class="border_dashed clearfix">
+				    		<a href="#" class="btn big center_text btn_with_line pull_right"><span>Купить</span></a>
+				    		<div class="name_img">нитка ekospun</div>
+			    		</div>
+			    	</div>
+			    </li>
+			    <li>
+			    	<img src="image/slider_img.png" />	
+			    	<div class="title_img wrap_block_with_border_dashed">
+			    		<div class="border_dashed clearfix">
+				    		<a href="#" class="btn big center_text btn_with_line pull_right"><span>Купить</span></a>
+				    		<div class="name_img">нитка ekospun</div>
+			    		</div>
+			    	</div>
+			    </li>
+			  </ul>
+			  <div id="prev_carousel3d_header" class="nav_carousel3d left"></div>
+			  <div id="next_carousel3d_header" class="nav_carousel3d right"></div>
+			</div>
+			<div class="wrap_block_with_border_dashed bottom">
+				<div class="border_dashed"></div>
+			</div>
+		</div>
+
+		<div class="slider_wrapper header_slide_padding">
+			
+			<div class="slider owl-carousel with_stage_padding">
+			    <div class="item">
+			    	<a href="#" class="center_text link_carousel">
+			    		<span class="wrap_img"><img src="image/img5carosel2.png" class="responsive_img" alt=""></span>
+			    		<span class="title_img"><span>ТКАНИ</span></span>
+			    	</a>
+		    	</div>
+			    <div class="item">
+			    	<a href="#" class="center_text link_carousel">
+			    		<span class="wrap_img"><img src="image/img2_carosel2.png" class="responsive_img" alt=""></span>
+			    		<span class="title_img"><span>Все для брюк</span></span>
+			    	</a>
+		    	</div>
+			    <div class="item">
+			    	<a href="#" class="center_text link_carousel">
+			    		<span class="wrap_img"><img src="image/img3_carosel2.png" class="responsive_img" alt=""></span>
+			    		<span class="title_img"><span>Все для рукоделия</span></span>
+			    	</a>
+		    	</div>
+			    <div class="item">
+			    	<a href="#" class="center_text link_carousel">
+			    		<span class="wrap_img"><img src="image/img4_carosel2.png" class="responsive_img" alt=""></span>
+			    		<span class="title_img"><span>Аппликации</span></span>
+			    	</a>
+		    	</div>
+			    <div class="item">
+			    	<a href="#" class="center_text link_carousel">
+			    		<span class="wrap_img"><img src="image/img5carosel2.png" class="responsive_img" alt=""></span>
+			    		<span class="title_img"><span>ТКАНИ</span></span>
+			    	</a>
+		    	</div>
+			    <div class="item">
+			    	<a href="#" class="center_text link_carousel">
+			    		<span class="wrap_img"><img src="image/img6_carosel2.png" class="responsive_img" alt=""></span>
+			    		<span class="title_img"><span>ЗМЕЙКА</span></span>
+			    	</a>
+		    	</div>
+			    <div class="item">
+			    	<a href="#" class="center_text link_carousel">
+			    		<span class="wrap_img"><img src="image/img7_carosel2.png" class="responsive_img" alt=""></span>
+			    		<span class="title_img"><span>ЛЕНТА</span></span>
+			    	</a>
+		    	</div>
+			    <div class="item">
+			    	<a href="#" class="center_text link_carousel">
+			    		<span class="wrap_img"><img src="image/img5carosel2.png" class="responsive_img" alt=""></span>
+			    		<span class="title_img"><span>ТКАНИ</span></span>
+			    	</a>
+		    	</div>
+			    
+			</div>	
+			<div id="draggable" class="ui-widget-content">
+			  
+			</div>
+		</div>
+	</header>
+
+
+
+
+
+	<div class="content">
+		<div class="wrap_product  clearfix">
+			<div class="sidebar pull_left">
+				<div class="wrap_sort_title clearfix">
+					<a href="#" class="btn sort_btn sort_left pull_left center_text"> <span>опт</span></a>
+					<a href="#" class="btn sort_btn sort_right pull_right center_text"> <span>розница</span></a>
+				</div>
+				<ul>
+					<li><a href="#" class="btn big"><span>АППЛИКАЦИИ</span></a></li>
+					<li><a href="#" class="btn big"><span>Дублирин / флизелин</span></a></li>
+					<li><a href="#" class="btn big"><span>Запчасти к швейным машинкам</span></a></li>
+					<li><a href="#" class="btn big"><span>Иглы</span></a></li>
+					<li><a href="#" class="btn big"><span>Итальянская фурнитура</span></a></li>
+					<li><a href="#" class="btn big"><span>Канаты</span></a></li>
+					<li><a href="#" class="btn big"><span>Карманка</span></a></li>
+					<li><a href="#" class="btn big"><span>Кнопка трикотажная</span></a></li>
+					<li><a href="#" class="btn big"><span>Кнопки</span></a></li>
+					<li><a href="#" class="btn big"><span>Металлическая и пластмассовая фурн...</span></a></li>
+					<li><a href="#" class="btn big"><span>Наше производство</span></a></li>
+					<li><a href="#" class="btn big"><span>Нитка</span></a></li>
+					<li><a href="#" class="btn big"><span>Пистолеты, Нумераторы</span></a></li>
+					<li><a href="#" class="btn big"><span>Пломба</span></a></li>
+					<li><a href="#" class="btn big"><span>Украшения, пряжки, лента декор</span></a></li>
+					<li><a href="#" class="btn big"><span>Пистолеты, Нумераторы</span></a></li>
+					<li><a href="#" class="btn big"><span>Наше производство</span></a></li>
+					<li><a href="#" class="btn big"><span>Пломба</span></a></li>
+					<li><a href="#" class="btn big"><span>Нитка</span></a></li>
+					<li><a href="#" class="btn big"><span>Украшения, пряжки, лента декор</span></a></li>
+					<li><a href="#" class="btn big"><span>Кнопка трикотажная</span></a></li>
+					<li><a href="#" class="btn big"><span>Нитка</span></a></li>
+					<li><a href="#" class="btn big"><span>Застёжка-молния</span></a></li>
+					<li><a href="#" class="btn big"><span>Металлическая и пластмассовая фурн...</span></a></li>
+					<li><a href="#" class="btn big"><span>Пломба</span></a></li>
+					<li><a href="#" class="btn big"><span>Кнопка трикотажная</span></a></li>
+					<li><a href="#" class="btn big"><span>Застёжка-молния</span></a></li>
+				</ul>
+			</div>
+			<div class="wrap_main_content">
+				<div class="nav_product blockInContent">
+					<div class="title_block_content wrap_block_with_border_dashed">
+						<div class="border_dashed">Новинки</div>
+					</div>
+					<div class="slider_wrapper slider_content">
+			
+						<div class="slider owl-carousel content_product">
+						    <div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										<div class="column_left pull_left">
+											<div class="old_price_product">662,<sup>50</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										<div class="column_left pull_left">
+											<div class="old_price_product">662,<sup>50</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										<div class="column_left pull_left">
+											<div class="old_price_product">662,<sup>50</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    </div>
+					</div>
+				</div>
+				<div class="popular_product blockInContent">
+					<div class="title_block_content wrap_block_with_border_dashed">
+						<div class="border_dashed">Популярные</div>
+					</div>
+					<div class="slider_wrapper slider_content">
+			
+						<div class="slider owl-carousel content_product">
+						    <div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										<div class="column_left pull_left">
+											<div class="old_price_product">662,<sup>50</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										<div class="column_left pull_left">
+											<div class="old_price_product">662,<sup>50</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product1.png" alt="" class="responsive_img"></div>
+									<div class="name_product">
+										<p>пресс универсальный большой чугун для кнопок-блочек</p>
+									</div>
+									<div class="cod_product">код: 3458</div>
+									<div class="wrap_product_btn clearfix">
+										
+										<div class="column_right">
+											<a href="#" class="balance_product"><span>СРАВНИТЬ</span> <i class="fa fa-balance-scale"></i></a>
+										</div>
+									</div>
+									<div class="wrap_product_btn clearfix ">
+										<div class="column_left pull_left">
+											<div class="price_product">640,<sup>00</sup><span class="valuta"> грн.</span></div>
+										</div>
+										<div class="column_right">
+											<a href="#" class="btn small pull_right center_text"><span>купить</span></a>
+										</div>
+										
+									</div>
+								</div>
+					    	</div>
+					    </div>
+					</div>
+				</div>
+				<div class="view_product blockInContent">
+					<div class="title_block_content wrap_block_with_border_dashed">
+						<div class="border_dashed">Просмотренные</div>
+					</div>
+					<div class="slider_wrapper slider_content">
+			
+						<div class="slider owl-carousel content_product">
+						    <div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product2.png" alt="" class="responsive_img"></div>
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product2.png" alt="" class="responsive_img"></div>
+									
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product2.png" alt="" class="responsive_img"></div>
+									
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product2.png" alt="" class="responsive_img"></div>
+									
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product2.png" alt="" class="responsive_img"></div>
+									
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product2.png" alt="" class="responsive_img"></div>
+									
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product2.png" alt="" class="responsive_img"></div>
+									
+								</div>
+					    	</div>
+					    	<div class="item">
+						    	<div class="product_block ">
+									<div class="wrap_top_rivet"></div>
+									<div class="wrap_img center_text"><img src="image/product2.png" alt="" class="responsive_img"></div>
+									
+								</div>
+					    	</div>
+					    </div>
+					</div>
+				</div>
+				<div class="scrollDecoration">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt aperiam culpa laudantium ab quaerat eveniet itaque adipisci optio cumque unde?
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At voluptatem corporis aliquam laborum tenetur suscipit id eaque itaque repellat, soluta impedit odio necessitatibus, expedita rerum laudantium sit et facere, ipsam!</span>
+					<span>Nisi, pariatur eum ratione neque officia, voluptate quaerat repudiandae. Laborum assumenda itaque a praesentium dolorum id, corrupti perspiciatis, hic tempora maiores voluptatum, doloribus doloremque cupiditate rem est possimus enim cumque!</span>
+					<span>Explicabo velit magnam ducimus. Dolorem recusandae quas asperiores placeat repudiandae tempora ab omnis. Optio ipsam illum exercitationem repudiandae, magnam accusamus quod laboriosam temporibus, et suscipit quas labore culpa molestias doloremque!</span>
+					<span>Suscipit iste dicta alias unde ullam animi nesciunt dolores odit nobis obcaecati voluptates iure dolorum vero deleniti accusantium error expedita nulla, nemo, tempora consequatur id eveniet, saepe. Quidem, harum, accusamus.</span>
+					<span>Consequatur laboriosam labore mollitia aperiam atque cumque ipsa non ut repellendus recusandae earum nobis, voluptatem qui tenetur quia rerum sed quod. Nobis, sit in nesciunt amet ex a, ab reprehenderit.</span></p>
+				</div>
+			</div>
+
+		</div>
+	
+
+		<footer>
+			<div class="footer_info ">
+				<div class="fix_width_block pull_left">
+					<div class="title_footer_info"><i class="fa fa-clock-o"></i>Время работы</div>
+					<p class="time_work">Пн - Пт:   09:00 - 19:00<br>
+					Сб - Вс:    10:00 - 18:00</p>
+					<div class="title_footer_small"><i class="fa fa-pencil-square-o"></i><span>Предложения и замечание</span></div>
+					<a href="mailto:modern@furnitura.com.ua" class="email"><i class="fa fa-envelope"></i>modern@furnitura.com.ua</a>
+					<p class="footer_telephon">Тел:   (048) 777-44-83,</p>
+
+				</div>
+				<div class="wrap_column_footer justify_align">
+					<div class="column_footer">
+						<div class="title_footer_info"><i class="fa fa-mobile"></i>Одесса</div>
+						<p class="footer_telephon fix_height">тел.: (0482) 34-11-08,<br>
+							тел.: (0482) 34-99-28,<br>
+							тел.: (048) 777-38-75,<br>
+							тел.: (048) 777-44-82,<br>
+							тел.: (048) 777-44-83
+						</p>
+						<div class="adress_shop"><i class="fa fa-map-marker"></i>пер. Красный, 24</div>	
+						<a href="mailto:fashion-box@ukr.net" class="email"><i class="fa fa-envelope"></i>fashion-box@ukr.net</a>
+						<div class="title_footer_small"><span>Одесса</span>(Рынок)</div>
+						<p class="footer_telephon">тел.: (0482) 34-11-08,<br>
+						тел.: (0482) 34-99-28,</p>
+					</div>
+					<div class="column_footer">
+						<div class="title_footer_info"><i class="fa fa-mobile"></i>Харьков</div>
+						<p class="footer_telephon fix_height">тел.: (057) 756-60-90<br>
+							тел.: (067) 488-41-35,<br>
+							тел.: (050) 495-18-46,<br>
+							тел.: (057) 756-61-00
+						</p>
+						<div class="adress_shop"><i class="fa fa-map-marker"></i>ул. Металлиста, 5</div>	
+						<a href="mailto:fashion-box@ukr.net" class="email"><i class="fa fa-envelope"></i>fashion-box@ukr.net</a>
+						<div class="title_footer_small"><span>Харьков</span>(Рынок)</div>
+						<p class="footer_telephon">тел.: (0482) 34-11-08</p>
+					</div>
+					<div class="column_footer">
+						<div class="title_footer_info"><i class="fa fa-bus"></i>Доставка</div>
+						<ul>
+							<li>Автолюкс</li>
+							<li>Новая Почта</li>
+							<li>Ночной Экспресс</li>
+							<li>Гюнсел</li>
+							<li>Деливери</li>
+							<li>Ваш Час</li>
+							<li>Интайм</li>
+							<li>РосУкрЭкспресс</li>
+						</ul>
+					</div>
+					<div class="column_footer">
+						<div class="title_footer_info"><i class="fa fa-cc-mastercard"></i>Оплата</div>
+						<ul>
+							<li>Наличный расчёт</li>
+							<li>Наложенный платёж</li>
+							<li>Предоплата Приват Банк</li>
+							<li>Онлайн оплата  Visa или MasterCard</li>
+							<li>Форма оплаты для предприятий и ЧП</li>
+						</ul>
+						<div class="wrap_img">
+							<div class="responsive_img"><img src="image/visa_mastercard_newlogo.png" alt=""></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bootom_line clearfix">
+				<ul class="wrap_social_blocks clearfix">
+					<li><a href="#" class="social_block"><span class="border_dashed"><i class="fa fa-google-plus"></i></span></a></li>
+					<li><a href="#" class="social_block"><span class="border_dashed"><i class="fa fa-vk"></i></span></a></li>
+					<li><a href="#" class="social_block"><span class="border_dashed"><i class="fa fa-odnoklassniki"></i></span></a></li>
+					<li><a href="#" class="social_block"><span class="border_dashed"><i class="fa fa-facebook"></i></span></a></li>
+					<li><a href="#" class="social_block"><span class="border_dashed"><i class="fa fa-tumblr"></i></span></a></li>
+					<li><a href="#" class="social_block"><span class="border_dashed"><i class="fa fa-youtube"></i></span></a></li>
+				</ul>
+				<div class="copyright">
+					<p>Copyright © Fashion Box. All rights reserved</p>
+				 </div>
+			</div>
+		</footer>	
+	</div>
+  	<div id="overlay"></div>
+	<div class="popup login_form">
+		<a class="close" href="#"><i class="fa fa-times"></i></a>
+		<h2>Вход в личный кабине</h2>
+		<div class="wrapper_form">
+			<form action="#" class="clearfix">
+				<div class="wrap_input">
+					<input type="text" name="login" placeholder="Логин" required/>
+				</div>
+				<div class="wrap_input">
+					<input type="password" name="password" required placeholder="Пароль">
+				</div>
+				<div class="wrap_checkbox">
+					<input type="checkbox"  id="remember_me">
+					<label for="remember_me"><i class="fa fa-check-square-o check"></i><i class="fa fa-square-o no_check"></i>Запомнить меня</label>
+				</div>
+				<div class="wrap_input  wrap_submit">
+					<div class="wrap_border">
+						<div class="line_top_border"></div>
+						<div class="line_left_border"></div>
+						<div class="line_right_border"></div>
+						<div class="line_bottom_border"></div>
+					</div>
+					<input type="submit" value="Войти">
+				</div>
+			</form>
+		</div>
+		<a href="#" class="pull_left">Забыли пароль?</a>
+		<a href="#" class="pull_right">Регистрация</a>
+	</div>
+	<div class="popup call_back">
+		<a class="close" href="#"><i class="fa fa-times"></i></a>
+		<h2>Ведите свой номер телефона</h2>
+		<div class="wrapper_form">
+			<form action="#" class="clearfix">
+				<div class="wrap_input">
+					<input type="text" name="phoneUser" placeholder="Номер телефона" required/>
+				</div>
+				
+				<div class="wrap_input  wrap_submit">
+					<div class="wrap_border">
+						<div class="line_top_border"></div>
+						<div class="line_left_border"></div>
+						<div class="line_right_border"></div>
+						<div class="line_bottom_border"></div>
+					</div>
+					<input type="submit" value="Заказать обратный звонок">
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
