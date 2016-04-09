@@ -16,12 +16,29 @@ app.sliderWithScroll = (function($, slider){
 	}
 
 	function initSlider (el) {
-			var $wrap = $(el),
-				$slider = $('.slider', $wrap);
+		var $wrap = $(el),
+			$slider = $('.slider', $wrap);
 
-			slider({'target': $slider});
+        $($slider).owlCarousel({
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            // itemsCustom: visibleItemArray,
+            navigationText: ["", ""],
+            navigation: true,
+            pagination: false,
+            afterMove : function() {
+                this.$elem.trigger('owlCarousel.after', this);
+            },
+            beforeMove : function() {
+                this.$elem.trigger('owlCarousel.befre', this);
+            },
+            startDragging : function() {
+                console.log('startDragging');
+            },
+            // mouseDrag: false
+        });
 
-			return $slider;
+		return $slider;
 	}
 
 
@@ -58,8 +75,6 @@ app.sliderWithScroll = (function($, slider){
 		$el.css('left', pos);
 	}
 
-
-
 	function getScroll (argument) {
 		var $wrap = $('<div>'),
 			$drag = $('<div>');
@@ -68,17 +83,13 @@ app.sliderWithScroll = (function($, slider){
 		$drag.addClass('scroll-control');
 
 		$wrap.append($drag);
-
+		console.log($drag);
 		return $wrap;
 	}
 
-
-
 	function events (data) {
 		var	$slider = data.$slider,
-			$scroll = data.$scroll
-			// scrollWidth = $scroll.width(),
-			// scrollWrapWidth = $scroll.parent().width(),
+			$scroll = data.$scroll;
 		$slider.on('owlCarousel.befre', function(event, data) {
 			event.preventDefault();
 			updateScrollPosition(
@@ -100,8 +111,6 @@ app.sliderWithScroll = (function($, slider){
 				$sl.find('.owl-wrapper').css(
 					'transform', 'translate3d(' + pos + 'px, 0px, 0px)'
 					);
-
-
 		});
 
 		$scroll.on('dragstop', function(event, ui) {
@@ -111,7 +120,6 @@ app.sliderWithScroll = (function($, slider){
 				scrollRowWidth = $sc.parent().width() - $sc.width();
 
 				current = Math.round((sliderData.itemsAmount - sliderData.visibleItems.length) * (ui.position.left / scrollRowWidth));
-
 				sliderData.currentItem = current;
 				sliderData.goTo(current);
 		});
